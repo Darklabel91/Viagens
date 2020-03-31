@@ -53,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3032FBF2433C74800908940 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B329389524313EE700304F97 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B3032FC02433C75C00908940 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3B48FE5243158B600EC6F1E /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B329388524313EE700304F97 = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +90,9 @@
 			children = (
 				B329389124313EE700304F97 /* AppDelegate.swift */,
 				B329389324313EE700304F97 /* SceneDelegate.swift */,
+				B3B48FE12431541900EC6F1E /* Model */,
+				B32938A624313F4D00304F97 /* Home */,
 				B3B48FE22431558E00EC6F1E /* DAO */,
-				B3B48FE12431541900EC6F1E /* Classes */,
-				B32938A624313F4D00304F97 /* Controllers */,
 				B32938A524313F3C00304F97 /* Telas */,
 				B329389A24313EE700304F97 /* Assets.xcassets */,
 				B329389C24313EE700304F97 /* LaunchScreen.storyboard */,
@@ -93,20 +109,21 @@
 			path = Telas;
 			sourceTree = "<group>";
 		};
-		B32938A624313F4D00304F97 /* Controllers */ = {
+		B32938A624313F4D00304F97 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B329389524313EE700304F97 /* ViewController.swift */,
+				B3032FBF2433C74800908940 /* Controller */,
+				B3032FC02433C75C00908940 /* View */,
 			);
-			path = Controllers;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		B3B48FE12431541900EC6F1E /* Classes */ = {
+		B3B48FE12431541900EC6F1E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B3B48FDF2431540F00EC6F1E /* Viagem.swift */,
 			);
-			path = Classes;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B3B48FE22431558E00EC6F1E /* DAO */ = {
@@ -114,7 +131,6 @@
 			children = (
 				B3E979302432406800EFADCE /* Imagens */,
 				B3B48FE3243155B100EC6F1E /* ViagemDAO.swift */,
-				B3B48FE5243158B600EC6F1E /* TableViewCell.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";

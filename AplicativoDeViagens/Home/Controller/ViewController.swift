@@ -32,10 +32,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCel
         let viagemAtual = listaViagens[indexPath.row]
+        
         cell.labelTitulo.text = viagemAtual.titulo
         cell.labelPreco.text = "R$ \(viagemAtual.preco)"
         cell.labelQuantidadeDeDias.text = "\(viagemAtual.quantidadeDeDias) dias"
         cell.labelImagem.image = UIImage(named: viagemAtual.caminhoDaImagem)
+        cell.labelImagem.layer.cornerRadius = 10
+        
         return cell
     }
     
