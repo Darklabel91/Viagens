@@ -16,6 +16,8 @@
 		B3B48FE02431540F00EC6F1E /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B48FDF2431540F00EC6F1E /* Viagem.swift */; };
 		B3B48FE4243155B100EC6F1E /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B48FE3243155B100EC6F1E /* ViagemDAO.swift */; };
 		B3B48FE6243158B600EC6F1E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B48FE5243158B600EC6F1E /* TableViewCell.swift */; };
+		B3CF38122434FB370064508A /* PacotesViagensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CF38112434FB370064508A /* PacotesViagensViewController.swift */; };
+		B3CF3818243501770064508A /* PacoteViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CF3817243501770064508A /* PacoteViagemCollectionViewCell.swift */; };
 		B3E9794C2432462E00EFADCE /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3E979472432462E00EFADCE /* img4.jpg */; };
 		B3E9794D2432462E00EFADCE /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3E979482432462E00EFADCE /* img2.jpg */; };
 		B3E9794E2432462E00EFADCE /* img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3E979492432462E00EFADCE /* img5.jpg */; };
@@ -35,6 +37,8 @@
 		B3B48FDF2431540F00EC6F1E /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		B3B48FE3243155B100EC6F1E /* ViagemDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemDAO.swift; sourceTree = "<group>"; };
 		B3B48FE5243158B600EC6F1E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B3CF38112434FB370064508A /* PacotesViagensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesViagensViewController.swift; sourceTree = "<group>"; };
+		B3CF3817243501770064508A /* PacoteViagemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagemCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3E979472432462E00EFADCE /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img4.jpg; path = Imagens/img4.jpg; sourceTree = SOURCE_ROOT; };
 		B3E979482432462E00EFADCE /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img2.jpg; path = Imagens/img2.jpg; sourceTree = SOURCE_ROOT; };
 		B3E979492432462E00EFADCE /* img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = img5.jpg; path = Imagens/img5.jpg; sourceTree = SOURCE_ROOT; };
@@ -92,6 +96,7 @@
 				B329389324313EE700304F97 /* SceneDelegate.swift */,
 				B3B48FE12431541900EC6F1E /* Model */,
 				B32938A624313F4D00304F97 /* Home */,
+				B3CF380E2434FADC0064508A /* Pacotes */,
 				B3B48FE22431558E00EC6F1E /* DAO */,
 				B32938A524313F3C00304F97 /* Telas */,
 				B329389A24313EE700304F97 /* Assets.xcassets */,
@@ -133,6 +138,31 @@
 				B3B48FE3243155B100EC6F1E /* ViagemDAO.swift */,
 			);
 			path = DAO;
+			sourceTree = "<group>";
+		};
+		B3CF380E2434FADC0064508A /* Pacotes */ = {
+			isa = PBXGroup;
+			children = (
+				B3CF380F2434FAF00064508A /* Controller */,
+				B3CF38102434FAFB0064508A /* View */,
+			);
+			path = Pacotes;
+			sourceTree = "<group>";
+		};
+		B3CF380F2434FAF00064508A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3CF38112434FB370064508A /* PacotesViagensViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B3CF38102434FAFB0064508A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3CF3817243501770064508A /* PacoteViagemCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B3E979302432406800EFADCE /* Imagens */ = {
@@ -223,8 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CF38122434FB370064508A /* PacotesViagensViewController.swift in Sources */,
 				B3B48FE02431540F00EC6F1E /* Viagem.swift in Sources */,
 				B3B48FE4243155B100EC6F1E /* ViagemDAO.swift in Sources */,
+				B3CF3818243501770064508A /* PacoteViagemCollectionViewCell.swift in Sources */,
 				B329389624313EE700304F97 /* ViewController.swift in Sources */,
 				B3B48FE6243158B600EC6F1E /* TableViewCell.swift in Sources */,
 				B329389224313EE700304F97 /* AppDelegate.swift in Sources */,
