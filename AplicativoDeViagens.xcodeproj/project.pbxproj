@@ -94,10 +94,8 @@
 			children = (
 				B329389124313EE700304F97 /* AppDelegate.swift */,
 				B329389324313EE700304F97 /* SceneDelegate.swift */,
-				B3B48FE12431541900EC6F1E /* Model */,
-				B32938A624313F4D00304F97 /* Home */,
-				B3CF380E2434FADC0064508A /* Pacotes */,
 				B3B48FE22431558E00EC6F1E /* DAO */,
+				B3B48FE12431541900EC6F1E /* Classes */,
 				B32938A524313F3C00304F97 /* Telas */,
 				B329389A24313EE700304F97 /* Assets.xcassets */,
 				B329389C24313EE700304F97 /* LaunchScreen.storyboard */,
@@ -110,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				B329389724313EE700304F97 /* Main.storyboard */,
+				B32938A624313F4D00304F97 /* Home */,
+				B3CF380E2434FADC0064508A /* Pacotes */,
 			);
 			path = Telas;
 			sourceTree = "<group>";
@@ -123,12 +123,12 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B3B48FE12431541900EC6F1E /* Model */ = {
+		B3B48FE12431541900EC6F1E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				B3B48FDF2431540F00EC6F1E /* Viagem.swift */,
 			);
-			path = Model;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		B3B48FE22431558E00EC6F1E /* DAO */ = {
