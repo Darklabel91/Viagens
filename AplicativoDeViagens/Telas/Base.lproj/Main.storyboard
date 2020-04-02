@@ -77,7 +77,7 @@
                                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bS-XT-YZL">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bS-XT-YZL">
                                                     <rect key="frame" x="263" y="156" width="42" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="23" id="mTG-ao-v4v">
@@ -111,7 +111,7 @@
                                                 </constraint>
                                                 <constraint firstItem="6qT-Um-NVh" firstAttribute="trailing" secondItem="tgQ-mW-bQB" secondAttribute="trailingMargin" id="mQY-BS-vje"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XRD-or-ksy" secondAttribute="trailing" constant="20" symbolic="YES" id="ouB-20-kKa"/>
-                                                <constraint firstAttribute="bottom" secondItem="8bS-XT-YZL" secondAttribute="bottom" constant="-3" id="q0F-N6-Ba6"/>
+                                                <constraint firstAttribute="bottom" secondItem="8bS-XT-YZL" secondAttribute="bottom" constant="-4" id="q0F-N6-Ba6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
