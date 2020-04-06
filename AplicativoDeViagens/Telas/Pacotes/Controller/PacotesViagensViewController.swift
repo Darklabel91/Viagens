@@ -8,17 +8,20 @@
 
 import UIKit
 
-class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
  
     @IBOutlet weak var colecaoPacote: UICollectionView!
+    @IBOutlet weak var pesquisarViagens: UISearchBar!
+    @IBOutlet weak var contadorPacotes: UILabel!
     
-    let listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+    var listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
+    var listaFiltrada: Array<Viagem> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         colecaoPacote.dataSource = self
         colecaoPacote.delegate = self
-
+        pesquisarViagens.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -42,6 +45,29 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)-> CGSize {
         let larguraCelula = collectionView.bounds.width / 2
         return CGSize(width: larguraCelula - 10, height: 160)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let totalChar = searchText.count
+        for viagem in listaViagens {
+            if viagem.titulo.contains(searchText) {
+                if listaFiltrada.contains(viagem) == false {
+                    listaFiltrada.append(viagem)
+                }
+            }
+        }
+        if totalChar >= 1 {
+            listaViagens = listaFiltrada
+        }else{
+            listaViagens = ViagemDAO().retornaTodasAsViagens()
+            listaFiltrada.removeAll()
+        }
+        self.contadorPacotes.text = atualizaLabel()
+        colecaoPacote.reloadData()
+    }
+    
+    func atualizaLabel() -> String {
+        return listaViagens.count == 1 ? "1 pacote encontrado" : "\(listaViagens.count) pacotes encontrados"
     }
 
     
