@@ -48,15 +48,16 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let totalChar = searchText.count
-        for viagem in listaViagens {
-            if viagem.titulo.contains(searchText) {
-                if listaFiltrada.contains(viagem) == false {
-                    listaFiltrada.append(viagem)
+//        let filtroListaViagem = NSPredicate(format: "titulo contains %@", searchText)
+//        let listaFiltrada:Array<Viagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array
+        if searchText != "" {
+            for viagem in listaViagens {
+                if viagem.titulo.contains(searchText) {
+                    if listaFiltrada.contains(viagem) == false {
+                        listaFiltrada.append(viagem)
+                    }
                 }
             }
-        }
-        if totalChar >= 1 {
             listaViagens = listaFiltrada
         }else{
             listaViagens = ViagemDAO().retornaTodasAsViagens()
@@ -69,8 +70,4 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     func atualizaLabel() -> String {
         return listaViagens.count == 1 ? "1 pacote encontrado" : "\(listaViagens.count) pacotes encontrados"
     }
-
-    
-
-
 }
