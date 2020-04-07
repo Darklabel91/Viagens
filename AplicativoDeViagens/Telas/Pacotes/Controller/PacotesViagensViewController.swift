@@ -57,8 +57,10 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     //MARK: - Mostrar tela detalhes
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let pacote = listaPacotes[indexPath.item]
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyBoard.instantiateViewController(identifier: "detalhes") as! DetalhesViagensViewController
+        controller.pacoteSelecionado = pacote
         self.present(controller, animated: true, completion: nil)
     }
     

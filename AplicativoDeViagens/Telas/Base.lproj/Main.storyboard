@@ -559,6 +559,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kdb-lc-j2I"/>
                     </view>
+                    <connections>
+                        <outlet property="imagemPacoteViagem" destination="O4i-kn-nsl" id="mPQ-6N-MYB"/>
+                        <outlet property="labelDataViagem" destination="iTh-ik-42H" id="530-e2-hyh"/>
+                        <outlet property="labelDescricaoPacoteViagem" destination="f77-Yg-vej" id="vCd-Im-LaS"/>
+                        <outlet property="labelPrecoPacoteViagem" destination="3Fa-TN-lTn" id="5uK-YE-jdV"/>
+                        <outlet property="labelTituloPacoteViagem" destination="bvw-E1-0je" id="59u-IF-ML1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vg6-2T-AWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
