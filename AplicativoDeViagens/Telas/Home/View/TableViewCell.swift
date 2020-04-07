@@ -9,6 +9,8 @@
 import UIKit
 
 class TableViewCel: UITableViewCell {
+    
+    //MARK: - IBOutlets
 
     @IBOutlet weak var labelTitulo: UILabel!
     @IBOutlet weak var labelPreco: UILabel!

@@ -8,11 +8,16 @@
 
 import UIKit
 
-class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate{
+class PacotesViagensViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UICollectionViewDelegate{
  
+    
+    //MARK: - IBOutlets
+    
     @IBOutlet weak var colecaoPacote: UICollectionView!
     @IBOutlet weak var pesquisarViagens: UISearchBar!
     @IBOutlet weak var contadorPacotes: UILabel!
+    
+    //MARK: - Inicializadores
     
     var listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
     var listaFiltrada: Array<Viagem> = []
@@ -24,6 +29,8 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         pesquisarViagens.delegate = self
         // Do any additional setup after loading the view.
     }
+    
+    //MARK: - CollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.listaViagens.count
@@ -47,9 +54,18 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         return CGSize(width: larguraCelula - 10, height: 160)
     }
     
+    //MARK: - Mostrar tela detalhes
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(identifier: "detalhes") as! DetalhesViagensViewController
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    
+    //MARK: - SearchBar
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        let filtroListaViagem = NSPredicate(format: "titulo contains %@", searchText)
-//        let listaFiltrada:Array<Viagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array
         if searchText != "" {
             for viagem in listaViagens {
                 if viagem.titulo.contains(searchText) {

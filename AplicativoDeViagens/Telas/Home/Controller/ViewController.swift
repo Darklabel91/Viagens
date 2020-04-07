@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var tabelaViagens: UITableView!
     @IBOutlet weak var viewHoteis: UIView!
     @IBOutlet weak var viewPacotes: UIView!
+    
+    //MARK: - Inicializadore
     
     let listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
 
@@ -24,6 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.viewHoteis.layer.cornerRadius = 10
     }
     
+    //MARK: - TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listaViagens.count
@@ -43,7 +47,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //return 260
         return 175
     }
 
