@@ -19,8 +19,8 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     
     //MARK: - Inicializadores
     
-    var listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
-    var listaFiltrada: Array<Viagem> = []
+    var listaPacotes: Array<PacoteViagem> = PacoteViagemDAO().retornaTodasAsViagens()
+    var listaFiltrada: Array<PacoteViagem> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +33,16 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     //MARK: - CollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.listaViagens.count
+        return self.listaPacotes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celulaPacote = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaPacote", for: indexPath) as! PacoteViagemCollectionViewCell
-        let viagemAtual = listaViagens[indexPath.item]
-        celulaPacote.imagemViagem.image = UIImage(named: viagemAtual.caminhoDaImagem)
-        celulaPacote.labelTitulo.text = viagemAtual.titulo
-        celulaPacote.labelQuantidadeDias.text = viagemAtual.quantidadeDeDias
-        celulaPacote.labelPreco.text = "R$ \(viagemAtual.preco)"
+        let viagemAtual = listaPacotes[indexPath.item]
+        celulaPacote.imagemViagem.image = UIImage(named: viagemAtual.viagem.caminhoDaImagem)
+        celulaPacote.labelTitulo.text = viagemAtual.viagem.titulo
+        celulaPacote.labelQuantidadeDias.text = viagemAtual.viagem.quantidadeDeDias
+        celulaPacote.labelPreco.text = "R$ \(viagemAtual.viagem.preco)"
         celulaPacote.layer.borderWidth = 0.5
         celulaPacote.layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor
         celulaPacote.layer.cornerRadius = 8
@@ -67,16 +67,16 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
-            for viagem in listaViagens {
-                if viagem.titulo.contains(searchText) {
+            for viagem in listaPacotes {
+                if viagem.viagem.titulo.contains(searchText) {
                     if listaFiltrada.contains(viagem) == false {
                         listaFiltrada.append(viagem)
                     }
                 }
             }
-            listaViagens = listaFiltrada
+            listaPacotes = listaFiltrada
         }else{
-            listaViagens = ViagemDAO().retornaTodasAsViagens()
+            listaPacotes = PacoteViagemDAO().retornaTodasAsViagens()
             listaFiltrada.removeAll()
         }
         self.contadorPacotes.text = atualizaLabel()
@@ -84,6 +84,6 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     }
     
     func atualizaLabel() -> String {
-        return listaViagens.count == 1 ? "1 pacote encontrado" : "\(listaViagens.count) pacotes encontrados"
+        return listaPacotes.count == 1 ? "1 pacote encontrado" : "\(listaPacotes.count) pacotes encontrados"
     }
 }
