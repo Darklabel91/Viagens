@@ -27,7 +27,6 @@
 		B338B57E243D2ECA00C65FC5 /* icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B338B578243D2ECA00C65FC5 /* icon_back.png */; };
 		B338B57F243D2ECA00C65FC5 /* icon_hotel.png in Resources */ = {isa = PBXBuildFile; fileRef = B338B579243D2ECA00C65FC5 /* icon_hotel.png */; };
 		B338B580243D2ECA00C65FC5 /* icon_package@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B338B57A243D2ECA00C65FC5 /* icon_package@2x.png */; };
-		B365419D243FE2B4000E3203 /* funcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B365419C243FE2B4000E3203 /* funcoes.swift */; };
 		B3B48FE02431540F00EC6F1E /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B48FDF2431540F00EC6F1E /* Viagem.swift */; };
 		B3B48FE4243155B100EC6F1E /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B48FE3243155B100EC6F1E /* ViagemDAO.swift */; };
 		B3B48FE6243158B600EC6F1E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B48FE5243158B600EC6F1E /* TableViewCell.swift */; };
@@ -64,7 +63,6 @@
 		B338B578243D2ECA00C65FC5 /* icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back.png; sourceTree = "<group>"; };
 		B338B579243D2ECA00C65FC5 /* icon_hotel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_hotel.png; sourceTree = "<group>"; };
 		B338B57A243D2ECA00C65FC5 /* icon_package@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_package@2x.png"; sourceTree = "<group>"; };
-		B365419C243FE2B4000E3203 /* funcoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = funcoes.swift; sourceTree = "<group>"; };
 		B3B48FDF2431540F00EC6F1E /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		B3B48FE3243155B100EC6F1E /* ViagemDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemDAO.swift; sourceTree = "<group>"; };
 		B3B48FE5243158B600EC6F1E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 			children = (
 				B3B48FDF2431540F00EC6F1E /* Viagem.swift */,
 				B338B564243D2D1A00C65FC5 /* PacoteViagem.swift */,
-				B365419C243FE2B4000E3203 /* funcoes.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -348,7 +345,6 @@
 				B3CF38122434FB370064508A /* PacotesViagensViewController.swift in Sources */,
 				B3B48FE02431540F00EC6F1E /* Viagem.swift in Sources */,
 				B3B48FE4243155B100EC6F1E /* ViagemDAO.swift in Sources */,
-				B365419D243FE2B4000E3203 /* funcoes.swift in Sources */,
 				B3B69284243D24B5001F89DA /* DetalhesViagensViewController.swift in Sources */,
 				B3CF3818243501770064508A /* PacoteViagemCollectionViewCell.swift in Sources */,
 				B329389624313EE700304F97 /* ViewController.swift in Sources */,
