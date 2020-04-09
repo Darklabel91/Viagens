@@ -68,6 +68,16 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     //MARK: - SearchBar
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        procura()
+    }
+    
+    func atualizaLabel() -> String {
+        return listaPacotes.count == 1 ? "1 pacote encontrado" : "\(listaPacotes.count) pacotes encontrados"
+    }
+    //MARK: - Como não funciona o método de pesquisa demonstrado em aula ...
+    
+    func procura(){
+        let searchText = pesquisarViagens.text!
         if searchText != "" {
             for viagem in listaPacotes {
                 if viagem.viagem.titulo.contains(searchText) {
@@ -83,9 +93,5 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         }
         self.contadorPacotes.text = atualizaLabel()
         colecaoPacote.reloadData()
-    }
-    
-    func atualizaLabel() -> String {
-        return listaPacotes.count == 1 ? "1 pacote encontrado" : "\(listaPacotes.count) pacotes encontrados"
     }
 }

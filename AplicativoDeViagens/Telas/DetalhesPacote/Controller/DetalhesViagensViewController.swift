@@ -18,8 +18,9 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
     @IBOutlet weak var scrollprincipal: UIScrollView!
+    @IBOutlet weak var textFieldData: UITextField!
     
-    @IBOutlet weak var testeContraint: NSLayoutConstraint!
+    //MARK: - Init
     
     var pacoteSelecionado: PacoteViagem? = nil
     
@@ -40,8 +41,23 @@ class DetalhesViagensViewController: UIViewController {
     @objc func aumentaScroll(keyboardShowNotification notification: Notification) {
         if let userInfo = notification.userInfo, let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
              self.scrollprincipal.contentSize = CGSize(width: self.scrollprincipal.frame.width, height: self.scrollprincipal.frame.height + keyboardRectangle.height)
-            print(scrollprincipal.frame.height)
-            testeContraint.constant = keyboardRectangle.height
+            //print(scrollprincipal.frame.height)
         }
+    }
+    
+    @objc func exibeData(sender: UIDatePicker){
+        let formatador = DateFormatter()
+        formatador.dateFormat = "dd-MM-yyyy"
+        self.textFieldData.text = formatador.string(from: sender.date)
+        
+    }
+    
+     //MARK: - Action
+    
+    @IBAction func textFieldEntrou(_ sender: UITextField) {
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(exibeData(sender:)), for: .valueChanged)
     }
 }
