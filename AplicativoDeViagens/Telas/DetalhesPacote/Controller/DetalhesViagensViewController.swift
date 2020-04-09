@@ -19,6 +19,8 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
     @IBOutlet weak var scrollprincipal: UIScrollView!
     
+    @IBOutlet weak var testeContraint: NSLayoutConstraint!
+    
     var pacoteSelecionado: PacoteViagem? = nil
     
     override func viewDidLoad() {
@@ -35,9 +37,11 @@ class DetalhesViagensViewController: UIViewController {
     }
     //MARK: - Métodos
     
-    //Ainda não resolveu o problema do teclado :-( 
-    @objc func aumentaScroll (notificacao: Notification){
-        self.scrollprincipal.contentSize = CGSize(width: self.scrollprincipal.frame.width, height: self.scrollprincipal.frame.height + 320)
+    @objc func aumentaScroll(keyboardShowNotification notification: Notification) {
+        if let userInfo = notification.userInfo, let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+             self.scrollprincipal.contentSize = CGSize(width: self.scrollprincipal.frame.width, height: self.scrollprincipal.frame.height + keyboardRectangle.height)
+            print(scrollprincipal.frame.height)
+            testeContraint.constant = keyboardRectangle.height
+        }
     }
-
 }

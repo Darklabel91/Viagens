@@ -413,6 +413,7 @@
         <!--Detalhes Viagens View Controller-->
         <scene sceneID="2vb-xw-1MF">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vg6-2T-AWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="detalhes" id="dkB-YA-gDo" customClass="DetalhesViagensViewController" customModule="AplicativoDeViagens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zn1-cp-g0l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -606,12 +607,12 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7An-eV-h9w">
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdT-FD-6ne">
                                                         <rect key="frame" x="0.0" y="39" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="data de validade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O0g-0M-d1W">
                                                         <rect key="frame" x="0.0" y="78" width="355" height="34"/>
@@ -665,9 +666,9 @@
                         <outlet property="labelPrecoPacoteViagem" destination="3Fa-TN-lTn" id="5uK-YE-jdV"/>
                         <outlet property="labelTituloPacoteViagem" destination="bvw-E1-0je" id="59u-IF-ML1"/>
                         <outlet property="scrollprincipal" destination="9kz-Dd-fpd" id="ero-e6-Fa7"/>
+                        <outlet property="testeContraint" destination="bMc-JF-Sq7" id="2pB-uc-dVB"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vg6-2T-AWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1360.8" y="478.11094452773619"/>
         </scene>
