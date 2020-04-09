@@ -17,12 +17,13 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
     @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
-   
+    @IBOutlet weak var scrollprincipal: UIScrollView!
     
     var pacoteSelecionado: PacoteViagem? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(aumentaScroll), name: UIResponder.keyboardWillShowNotification, object: nil)
         if let pacote = pacoteSelecionado {
             self.imagemPacoteViagem.image = UIImage(named: pacote.viagem.caminhoDaImagem)
             self.labelTituloPacoteViagem.text = pacote.viagem.titulo
@@ -31,6 +32,12 @@ class DetalhesViagensViewController: UIViewController {
             self.labelPrecoPacoteViagem.text = pacote.viagem.preco
         }
 
+    }
+    //MARK: - Métodos
+    
+    //Ainda não resolveu o problema do teclado :-( 
+    @objc func aumentaScroll (notificacao: Notification){
+        self.scrollprincipal.contentSize = CGSize(width: self.scrollprincipal.frame.width, height: self.scrollprincipal.frame.height + 320)
     }
 
 }
