@@ -39,13 +39,7 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celulaPacote = collectionView.dequeueReusableCell(withReuseIdentifier: "celulaPacote", for: indexPath) as! PacoteViagemCollectionViewCell
         let viagemAtual = listaPacotes[indexPath.item]
-        celulaPacote.imagemViagem.image = UIImage(named: viagemAtual.viagem.caminhoDaImagem)
-        celulaPacote.labelTitulo.text = viagemAtual.viagem.titulo
-        celulaPacote.labelQuantidadeDias.text = viagemAtual.viagem.quantidadeDeDias
-        celulaPacote.labelPreco.text = "R$ \(viagemAtual.viagem.preco)"
-        celulaPacote.layer.borderWidth = 0.5
-        celulaPacote.layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor
-        celulaPacote.layer.cornerRadius = 8
+        celulaPacote.configuraCelula(pacoteViagem: viagemAtual)
         return celulaPacote
     }
     
@@ -69,7 +63,16 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
     //MARK: - SearchBar
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        Não funciona esse método por nada na terra, então criei a função "procura"
+//        if searchText != ""{
+//            let filtroListaViagem = NSPredicate(format: "PacoteViagem.viagem.titulo contains %@", searchText)
+//            let listaFiltrada:Array<PacoteViagem> = (listaPacotes as NSArray).filtered(using: filtroListaViagem) as! Array
+//            listaPacotes = listaFiltrada
+//        }
         procura()
+        self.contadorPacotes.text = atualizaLabel()
+        colecaoPacote.reloadData()
+
     }
     
     func procura(){
@@ -87,8 +90,6 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
             listaPacotes = PacoteViagemDAO().retornaTodasAsViagens()
             listaFiltrada.removeAll()
         }
-        self.contadorPacotes.text = atualizaLabel()
-        colecaoPacote.reloadData()
     }
     
     func atualizaLabel() -> String {
