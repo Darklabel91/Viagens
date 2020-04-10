@@ -254,7 +254,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Procurar" id="1Uw-xV-NDa"/>
+                    <tabBarItem key="tabBarItem" title="Procurar" image="icon_search.png" id="1Uw-xV-NDa"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="tabelaViagens" destination="ioL-ke-wOu" id="fbr-pk-F21"/>
                         <outlet property="viewHoteis" destination="fBC-rU-Olv" id="31H-mu-syl"/>
@@ -285,7 +286,7 @@
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-mR-t6d">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="KYG-mR-t6d">
                                         <rect key="frame" x="0.0" y="33" width="345" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Ig1-9M-piG"/>
@@ -401,7 +402,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7mn-68-iDn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pacotes" id="KE7-3S-NPF"/>
+                    <tabBarItem key="tabBarItem" title="Pacotes" image="icon_package.png" id="KE7-3S-NPF"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="colecaoPacote" destination="3w8-10-KwH" id="unz-xJ-2VN"/>
                         <outlet property="contadorPacotes" destination="UHo-wl-4W3" id="Ji7-f7-ilF"/>
@@ -667,6 +669,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kdb-lc-j2I"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="imagemPacoteViagem" destination="O4i-kn-nsl" id="mPQ-6N-MYB"/>
                         <outlet property="labelDataViagem" destination="iTh-ik-42H" id="530-e2-hyh"/>
@@ -830,5 +833,7 @@
         <image name="icon_airplane.png" width="50" height="50"/>
         <image name="icon_breakfast.png" width="50" height="50"/>
         <image name="icon_hotel.png" width="50" height="50"/>
+        <image name="icon_package.png" width="25" height="25"/>
+        <image name="icon_search.png" width="25" height="25"/>
     </resources>
 </document>

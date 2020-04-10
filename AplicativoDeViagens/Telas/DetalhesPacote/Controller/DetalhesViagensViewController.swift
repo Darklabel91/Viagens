@@ -34,7 +34,8 @@ class DetalhesViagensViewController: UIViewController {
             self.labelDataViagem.text = pacote.dataViagem
             self.labelPrecoPacoteViagem.text = "R$ \(pacote.viagem.preco)"
         }
-
+        let voltarButton = UIBarButtonItem(title: "Voltar", style: .plain, target: self, action: #selector(voltar))
+        navigationItem.leftBarButtonItem = voltarButton
     }
     //MARK: - Métodos
     
@@ -65,6 +66,11 @@ class DetalhesViagensViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyBoard.instantiateViewController(identifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
         controller.pacoteComprado = pacoteSelecionado
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+        //self.present(controller, animated: true, completion: nil)
+    }
+    
+    @objc func voltar(){
+        navigationController?.popViewController(animated: true)
     }
 }

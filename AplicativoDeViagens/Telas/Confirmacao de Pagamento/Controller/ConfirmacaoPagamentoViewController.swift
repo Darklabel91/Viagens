@@ -36,12 +36,16 @@ class ConfirmacaoPagamentoViewController: UIViewController {
             self.labelDescricaoPacote.text = pacote.descricao
             self.botaoVoltarPraHome.layer.cornerRadius = 10
         }
+        let voltarButton = UIBarButtonItem(title: "Voltar", style: .plain, target: self, action: #selector(voltar))
+        navigationItem.leftBarButtonItem = voltarButton
     }
     
     //MARK: - Actions
     
-    @IBAction func botaoVoltarHome(_ sender: Any) {
-        
+    @IBAction func voltar(_ sender: Any) {
+        if self.navigationController != nil {
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
     
 }
