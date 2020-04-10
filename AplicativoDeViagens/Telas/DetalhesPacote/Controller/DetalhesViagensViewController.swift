@@ -32,7 +32,7 @@ class DetalhesViagensViewController: UIViewController {
             self.labelTituloPacoteViagem.text = pacote.viagem.titulo
             self.labelDescricaoPacoteViagem.text = pacote.descricao
             self.labelDataViagem.text = pacote.dataViagem
-            self.labelPrecoPacoteViagem.text = pacote.viagem.preco
+            self.labelPrecoPacoteViagem.text = "R$ \(pacote.viagem.preco)"
         }
 
     }
@@ -59,5 +59,12 @@ class DetalhesViagensViewController: UIViewController {
         datePickerView.datePickerMode = .date
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(exibeData(sender:)), for: .valueChanged)
+    }
+    
+    @IBAction func botaoFinalizarCompra(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(identifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        self.present(controller, animated: true, completion: nil)
     }
 }
