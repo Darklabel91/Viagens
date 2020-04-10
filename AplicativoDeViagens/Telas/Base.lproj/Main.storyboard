@@ -428,7 +428,7 @@
                                 <rect key="frame" x="10" y="185" width="355" height="482"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jc8-Ey-GUI">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="477.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="482"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PORTO DE GALINHAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvw-E1-0je">
                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="31.5"/>
@@ -601,20 +601,20 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lWy-Ho-lgr">
-                                                <rect key="frame" x="0.0" y="292.5" width="355" height="185"/>
+                                                <rect key="frame" x="0.0" y="292.5" width="355" height="189.5"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7An-eV-h9w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7An-eV-h9w">
+                                                        <rect key="frame" x="0.0" y="0.0" width="355" height="38.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdT-FD-6ne">
-                                                        <rect key="frame" x="0.0" y="39" width="355" height="34"/>
+                                                        <rect key="frame" x="0.0" y="43.5" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="data de validade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O0g-0M-d1W">
-                                                        <rect key="frame" x="0.0" y="78" width="355" height="34"/>
+                                                        <rect key="frame" x="0.0" y="82.5" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -622,12 +622,12 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yew-3q-4wD">
-                                                        <rect key="frame" x="0.0" y="117" width="355" height="34"/>
+                                                        <rect key="frame" x="0.0" y="121.5" width="355" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="723-kW-xVN">
-                                                        <rect key="frame" x="0.0" y="156" width="355" height="29"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="723-kW-xVN">
+                                                        <rect key="frame" x="0.0" y="160.5" width="355" height="29"/>
                                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <state key="normal" title="finalizar compra">
@@ -641,6 +641,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jc8-Ey-GUI" secondAttribute="trailing" id="8RF-XI-2mE"/>
+                                    <constraint firstItem="jc8-Ey-GUI" firstAttribute="centerY" secondItem="9kz-Dd-fpd" secondAttribute="centerY" id="LMF-V3-Lww"/>
                                     <constraint firstItem="jc8-Ey-GUI" firstAttribute="top" secondItem="fUJ-0X-aQA" secondAttribute="top" id="Nbg-FA-pOC"/>
                                     <constraint firstItem="jc8-Ey-GUI" firstAttribute="leading" secondItem="9kz-Dd-fpd" secondAttribute="leading" id="R9N-xZ-IE5"/>
                                     <constraint firstItem="jc8-Ey-GUI" firstAttribute="centerX" secondItem="9kz-Dd-fpd" secondAttribute="centerX" id="bpy-2F-pvu"/>
