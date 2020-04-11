@@ -20,7 +20,7 @@ class PacoteViagemCollectionViewCell: UICollectionViewCell {
     func configuraCelula(pacoteViagem: PacoteViagem) {
         imagemViagem.image = UIImage(named: pacoteViagem.viagem.caminhoDaImagem)
         labelTitulo.text = pacoteViagem.viagem.titulo
-        labelQuantidadeDias.text = pacoteViagem.viagem.quantidadeDeDias
+        labelQuantidadeDias.text = pacoteViagem.viagem.quantidadeDeDias == "1" ? "1 dia" : "\(pacoteViagem.viagem.quantidadeDeDias) dias"
         labelPreco.text = "R$ \(pacoteViagem.viagem.preco)"
         layer.borderWidth = 0.5
         layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor

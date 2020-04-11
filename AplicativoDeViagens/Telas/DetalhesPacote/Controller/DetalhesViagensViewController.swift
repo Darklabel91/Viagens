@@ -19,6 +19,7 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
     @IBOutlet weak var scrollprincipal: UIScrollView!
     @IBOutlet weak var textFieldData: UITextField!
+    @IBOutlet weak var labelQuantidadeDias: UILabel!
     
     //MARK: - Init
     
@@ -33,6 +34,7 @@ class DetalhesViagensViewController: UIViewController {
             self.labelDescricaoPacoteViagem.text = pacote.descricao
             self.labelDataViagem.text = pacote.dataViagem
             self.labelPrecoPacoteViagem.text = "R$ \(pacote.viagem.preco)"
+            self.labelQuantidadeDias.text = pacote.viagem.quantidadeDeDias == "1" ? "1 dia" : "\(pacote.viagem.quantidadeDeDias) dias"
         }
         let voltarButton = UIBarButtonItem(title: "Voltar", style: .plain, target: self, action: #selector(voltar))
         navigationItem.leftBarButtonItem = voltarButton
