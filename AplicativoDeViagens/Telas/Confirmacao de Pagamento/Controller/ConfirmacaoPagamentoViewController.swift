@@ -42,10 +42,14 @@ class ConfirmacaoPagamentoViewController: UIViewController {
     
     //MARK: - Actions
     
-    @IBAction func voltar(_ sender: Any) {
+    @IBAction func botaoVoltarHome(_ sender: Any) {
         if self.navigationController != nil {
             navigationController?.popToRootViewController(animated: true)
         }
+    }
+    
+    @objc func voltar(){
+        navigationController?.popViewController(animated: true)
     }
     
 }
